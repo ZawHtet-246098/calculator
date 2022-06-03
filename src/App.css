@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  /* font-family: "Russo One", sans-serif; */
+  font-family: "Share Tech Mono", monospace;
+  margin: 0;
+  background: linear-gradient(to right, #348f50, #56b4d3);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.claculator {
+  width: 300px;
+  height: 420px;
+  /* background-color: #ecf0f1; */
+  background: linear-gradient(to right, #00cdac, #02aab0);
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.display-parent {
+  position: relative;
+  height: 60px;
+
+  width: 100%;
+  text-align: right;
+  color: black;
+  padding: 20px 10px 0px 0px;
+  font-size: 26px;
+
+  border-bottom: 1px solid gainsboro;
+
+  /* font-weight: bold; */
+}
+.display-parent small {
+  font-size: 12px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: black;
+}
+.nums-container {
+  width: 210px;
+}
+.ops-container {
+  width: 70px;
+}
+button {
+  border: none;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin: 5px;
+  font-size: 24px;
+  cursor: pointer;
+  /* font-weight: bold; */
+}
+.nums-container button:nth-child(2) {
+  color: black;
+}
+button:hover {
+  /* opacity: 0.9; */
+  outline: 0.1em solid grey;
+  z-index: 3;
+}
+button:active {
+  transform: scale(0.98);
+}
+button:focus {
+  outline: none;
+}
+button.big-v {
+  height: 110px;
+  border-radius: 50px;
+}
+button.big-h {
+  border-radius: 50px;
+
+  width: 130px;
+}
+button.orange {
+  background-color: #007aff;
+}
+button.dark-grey {
+  background-color: #323232;
+  color: #fff;
+}
+button.light-grey {
+  background-color: #a5a5a5;
+}
+
+button.ac,
+button#delete {
+  background-color: #09ccfc;
+}
