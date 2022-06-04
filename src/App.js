@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./scss/main.scss";
 
 const nums = ["Del", 7, 8, 9, 4, 5, 6, 1, 2, 3, 0];
 const ops = ["/", "*", "-", "+"];
@@ -175,24 +175,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-{
-  /* <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>4</button>
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>4</button>
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>4</button>
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button className="big-v">4</button>
-      <button className="big-h">1</button>
-      <button>3</button> */
-}

@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+$theme-colors: (
+  "lightblue": #09ccfc,
+  "blue": #007aff,
+  "darkgray": #323232,
+);
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@function bg($fcolor, $scolor) {
+  $background: linear-gradient(to right, $fcolor, $scolor);
+  @return $background;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  /* font-family: "Russo One", sans-serif; */
+  font-family: "Share Tech Mono", monospace;
+  //   background: linear-gradient(to right, #348f50, #56b4d3);
+  background: bg(#348f50, #56b4d3);
+
+  margin: 0;
+  min-height: 100vh;
+  @include flex;
+}
+.claculator {
+  width: 300px;
+  height: 420px;
+  /* background-color: #ecf0f1; */
+  background: bg(#00cdac, #02aab0);
+
+  flex-wrap: wrap;
+  border-radius: 4px;
+  @include flex;
+
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+  .display-parent {
+    position: relative;
+    height: 60px;
+
+    width: 100%;
+    text-align: right;
+    color: black;
+    padding: 20px 10px 0px 0px;
+    font-size: 26px;
+
+    border-bottom: 1px solid gainsboro;
+
+    /* font-weight: bold; */
+
+    small {
+      font-size: 12px;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      color: black;
+    }
+  }
+
+  .nums-container {
+    width: 210px;
+  }
+
+  .ops-container {
+    width: 70px;
+  }
+
+  button {
+    border: none;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin: 5px;
+    font-size: 24px;
+    cursor: pointer;
+    /* font-weight: bold; */
+
+    &:hover {
+      /* opacity: 0.9; */
+      outline: 0.1em solid grey;
+      z-index: 3;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+    &:focus {
+      outline: none;
+    }
+    &.big-v {
+      height: 110px;
+      border-radius: 50px;
+    }
+    &.big-h {
+      border-radius: 50px;
+
+      width: 130px;
+    }
+    &.orange {
+      background-color: map-get($theme-colors, "blue");
+    }
+    &.dark-grey {
+      background-color: map-get($theme-colors, "darkgray");
+      color: #fff;
+    }
+    &.light-grey {
+      background-color: #a5a5a5;
+    }
+
+    &.ac,
+    &#delete {
+      background-color: map-get($theme-colors, "lightblue");
+      color: black;
+    }
+  }
+}
